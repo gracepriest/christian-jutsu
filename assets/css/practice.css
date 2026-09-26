@@ -1,0 +1,326 @@
+/* Keep the original reading layouts and diagrams within the shared site theme. */
+.practice-page main{min-height:65vh}.practice-page .page-header{background:#e9ecdf;color:var(--forest);padding:54px 0;border-bottom:1px solid #d7dece;text-align:left}.practice-page .page-header h1{font-size:clamp(2.3rem,4vw,3.2rem);color:var(--forest);margin-bottom:12px}.practice-page .page-header p{color:var(--muted)!important;font-size:16px!important}.practice-page .about-content,.practice-page .rituals-content{padding:48px 0;background:var(--paper)}.practice-page .welcome,.practice-page .features,.practice-page .rituals-intro{background:var(--paper)}.practice-page .rituals-intro{padding:38px 0;border-bottom:1px solid var(--line)}.practice-page .intro-text{font-size:16px;line-height:1.9}.practice-page .guide-container{max-width:1000px;width:calc(100% - 64px);padding:38px 0;margin:auto}.practice-page .ritual-card,.practice-page .guide-step,.practice-page .feature-card{border:1px solid var(--line);border-left:3px solid #b6b99b;border-radius:3px;background:#fffdf8;box-shadow:none;padding:32px}.practice-page .ritual-card:hover,.practice-page .feature-card:hover{transform:none;box-shadow:none}.practice-page .guide-step h3,.practice-page .ritual-card h2,.practice-page .about-text h2{color:var(--forest)}.practice-page .ritual-icon,.practice-page .feature-icon{font-size:26px;color:var(--gold)}.practice-page .ritual-card p,.practice-page .about-text p{font-size:16px}.practice-page .feature-grid{gap:22px}.practice-page .rituals-cta{background:#e9ecdf;padding:45px 0}.practice-page .rituals-cta h2{color:var(--forest)}.practice-page .btn{box-shadow:none}.practice-page .btn:hover{transform:none;box-shadow:none}.practice-page .back-button{background:transparent;color:var(--forest);border:1px solid #b8c2ad;border-radius:2px;font:13px 'Segoe UI',sans-serif;padding:12px 18px}.practice-page .prayer-text,.practice-page .scripture-ref{background:#f0f1e7;border-left-color:#9aa582}.practice-page .direction-card,.practice-page .name-card{background:#eef0e5;border:1px solid #d9decd;border-radius:3px}.practice-page .warning-box{background:#f3eddf;border-color:#c7b284;border-radius:3px}.practice-page .warning-box h4{color:#746039}.practice-page .diagram{max-width:100%;overflow:auto;font-size:13px;line-height:1.8;border:1px solid var(--line);padding:22px}.practice-page .diagram pre{white-space:pre;min-width:min-content}.practice-page .image-placeholder{background:#f0f0e5;border:1px solid var(--line);border-radius:3px;box-shadow:none}.practice-page .site-footer{margin-top:0}.practice-page main a:not(.btn):not(.back-button){text-decoration:underline;text-underline-offset:3px}.practice-page main li{margin-bottom:9px}.practice-page .about-grid{grid-template-columns:2fr 1fr}.practice-page .guide-step h2{font-size:1.9rem}.practice-page .nav-panel a{text-decoration:none}.practice-page .site-footer p{margin-bottom:1rem}
+@media(max-width:700px){.practice-page .guide-container{width:calc(100% - 36px);padding-block:24px}.practice-page .page-header{padding:32px 0}.practice-page .ritual-card,.practice-page .guide-step,.practice-page .feature-card{padding:22px}.practice-page .about-grid{grid-template-columns:1fr}.practice-page .about-image{position:static;max-width:320px;margin:auto}.practice-page .direction-grid,.practice-page .names-grid{grid-template-columns:1fr}.practice-page .diagram{padding:12px;font-size:10px}.practice-page .prayer-text{padding:17px}.practice-page .feature-grid{grid-template-columns:1fr}.practice-page .page-header h1{font-size:2.3rem}.practice-page .site-brand{font-size:22px}}
+.practice-page .site-footer { text-align: left; }
+
+/* Prayers inside practice cards use the same prayer box as the guide pages. */
+.practice-page .ritual-card .prayer-text {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-left-width: 3px;
+    border-left-style: solid;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+    .practice-page .ritual-card .prayer-text {
+        padding: 17px;
+    }
+}
+
+/* The "Pray from the heart" box on the Prayers page. */
+.practice-page .prayer-collection {
+    margin: 52px 0 32px;
+    border: 1px solid #98a087;
+    border-top: 3px solid var(--gold);
+    border-radius: 4px;
+    background: #e7ebde;
+}
+
+.practice-page .prayer-collection-header {
+    padding: 38px 40px 34px;
+    border-bottom: 1px solid #bca16a;
+    background: var(--forest);
+    color: #f7f1e3;
+}
+
+.practice-page .prayer-collection-header .eyebrow {
+    margin-bottom: 14px;
+    color: #d9c392;
+}
+
+.practice-page .prayer-collection-header h2 {
+    margin-bottom: 18px;
+    color: #f7f1e3;
+    font-size: 2.3rem;
+    line-height: 1.2;
+}
+
+.practice-page .prayer-collection-intro {
+    max-width: 800px;
+    margin-bottom: 24px;
+    color: #e0e7da;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+/* On the Prayers page the frame is the page intro: the section supplies the spacing, and the
+   intro text is centred with nothing below it. */
+.practice-page .rituals-intro .prayer-collection {
+    margin: 0;
+}
+
+.practice-page .rituals-intro .prayer-collection-intro {
+    margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+    .practice-page .prayer-collection {
+        margin-top: 38px;
+    }
+
+    .practice-page .prayer-collection-header {
+        padding: 28px 22px;
+    }
+
+    .practice-page .prayer-collection-header h2 {
+        font-size: 1.9rem;
+    }
+}
+
+/* Library pages (such as Exercises and Prayers): pinned need filters, search, and collapsible cards. */
+.practice-page .library {
+    padding: 32px 0 48px;
+    background: var(--paper);
+}
+
+.practice-page .library-toolbar {
+    position: sticky;
+    top: var(--library-toolbar-top, 0px);
+    z-index: 50;
+    margin: 0 0 24px;
+    padding: 16px 0 12px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+}
+
+.practice-page .library-toolbar[hidden],
+.practice-page .library-group[hidden],
+.practice-page .ritual-card.library-card[hidden] {
+    display: none;
+}
+
+.practice-page #library-search {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #b8c2ad;
+    border-radius: 3px;
+    background: #fff;
+    color: var(--ink);
+    font: 16px 'Segoe UI', sans-serif;
+}
+
+.practice-page .library-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.practice-page .library-filters button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid #b8c2ad;
+    border-radius: 20px;
+    background: #fff;
+    color: var(--forest);
+    font: 13px 'Segoe UI', sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.practice-page .library-filters button[aria-pressed="true"] {
+    border-color: var(--forest);
+    background: var(--forest);
+    color: #f7f1e3;
+}
+
+.practice-page .library-filters button:focus-visible,
+.practice-page .library-card summary:focus-visible,
+.practice-page .library-actions button:focus-visible {
+    outline: 3px solid var(--forest);
+    outline-offset: 2px;
+}
+
+.practice-page .library-status {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.practice-page .library-group {
+    margin-bottom: 36px;
+}
+
+.practice-page .library-group-title {
+    margin-bottom: 4px;
+    color: var(--forest);
+    font-size: 1.7rem;
+}
+
+.practice-page .library-group-tagline {
+    margin-bottom: 14px;
+    color: var(--muted);
+}
+
+.practice-page .ritual-card.library-card {
+    margin-bottom: 12px;
+    padding: 0;
+    scroll-margin-top: var(--library-scroll-offset, 0px);
+}
+
+.practice-page .library-card summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 24px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.practice-page .library-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.practice-page .library-card summary::before {
+    content: '▸';
+    content: '▸' / '';
+    color: var(--gold);
+}
+
+.practice-page .library-card[open] summary::before {
+    content: '▾';
+    content: '▾' / '';
+}
+
+.practice-page .library-card summary h3 {
+    flex: 1;
+    margin: 0;
+    color: var(--forest);
+    font-size: 1.35rem;
+}
+
+.practice-page .library-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.practice-page .library-tag {
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e9ecdf;
+    color: var(--forest);
+}
+
+.practice-page .library-body {
+    padding: 16px 24px 20px;
+    border-top: 1px solid var(--line);
+}
+
+.practice-page .library-body ul {
+    margin-bottom: 1rem;
+}
+
+/* A button link to an item's full guide page. */
+.practice-page .library-guide {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.practice-page .library-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.practice-page .library-footer .library-also {
+    margin: 0;
+    font-size: inherit;
+}
+
+.practice-page .library-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.practice-page .library-actions button {
+    padding: 6px 12px;
+    border: 1px solid #b8c2ad;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--forest);
+    font: 13px 'Segoe UI', sans-serif;
+    cursor: pointer;
+}
+
+.practice-page .library-actions button[hidden] {
+    display: none;
+}
+
+.practice-page .library-no-results {
+    padding: 24px;
+    border: 1px dashed var(--line);
+    color: var(--muted);
+    text-align: center;
+}
+
+.practice-page .library .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .practice-page .library-toolbar {
+        padding: 10px 0 8px;
+    }
+
+    .practice-page #library-search {
+        padding: 10px 12px;
+    }
+
+    .practice-page .library-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 6px 6px 8px;
+        margin-inline: -6px;
+        scroll-snap-type: x proximity;
+        scroll-padding-inline: 6px;
+    }
+
+    .practice-page .library-filters button {
+        scroll-snap-align: start;
+    }
+
+    .practice-page .library-card summary {
+        padding: 14px 16px;
+    }
+
+    .practice-page .library-card summary h3 {
+        font-size: 1.15rem;
+    }
+
+    .practice-page .library-body {
+        padding: 14px 16px 16px;
+    }
+}
